@@ -15,7 +15,7 @@ const InputSchema = Yup.object({
     cpf: Yup.string()
         .matches(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/, 'Formato inválido. Use o formato 999.999.999-99'),
 
-    dataNascimento: Yup.string().max(new Date(), 'Você não pode colocar uma data futura!').matches(
+    dataNascimento: Yup.string().matches(
         /^\d{4}-\d{2}-\d{2}$/,
         'Formato de data inválido. Exemplo: YYYY-MM-DD.')
 
